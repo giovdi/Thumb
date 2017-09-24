@@ -5,11 +5,11 @@ A simple Laravel 5 service provider for including the [PHPThumb for Laravel 4](h
 ## Installation
 
 The PHPThumb Service Provider can be installed via [Composer](http://getcomposer.org) by adding the repository and requiring the
-`giovdi/laravel-thumb5` package in your project's `composer.json`. This can be done by cli with the following commands:
+`giovdi/laravel5-thumb` package in your project's `composer.json`. This can be done by cli with the following commands:
 
 ```
 composer config repositories.thumb5 vcs https://github.com/giovdi/laravel5-thumb
-composer require giovdi/laravel-thumb5
+composer require giovdi/laravel5-thumb
 ```
 
 Update your packages with ```composer update``` or install with ```composer install```.
