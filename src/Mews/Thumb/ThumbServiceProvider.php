@@ -12,13 +12,13 @@ class ThumbServiceProvider extends ServiceProvider {
 	protected $defer = false;
 
 	/**
-	 * Bootstrap the application events.
+	 * DEPRECATED - Bootstrap the application events.
 	 *
 	 * @return void
-	 */
+	 * 
 	public function boot()
 	{
-		$this->package('mews/thumb');
+		//$this->package('mews/thumb');
 
 		$app = $this->app;
 
@@ -26,7 +26,7 @@ class ThumbServiceProvider extends ServiceProvider {
 	    {
 
 	    });
-	}
+	}*/
 
 	/**
 	 * Register the service provider.

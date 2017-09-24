@@ -16,7 +16,7 @@ Update your packages with ```composer update``` or install with ```composer inst
 
 ## Usage
 
-To use the PHPThumb Service Provider, you must register the provider when bootstrapping your Laravel application. There are
+**Up to Laravel 5.5**, to use the PHPThumb Service Provider, you must register the provider when bootstrapping your Laravel application. There are
 essentially two ways to do this.
 
 Find the `providers` key in `app/config/app.php` and register the PHPThumb Service Provider.
@@ -24,7 +24,7 @@ Find the `providers` key in `app/config/app.php` and register the PHPThumb Servi
 ```php
     'providers' => array(
         // ...
-        'Mews\Thumb\ThumbServiceProvider',
+        Mews\Thumb\ThumbServiceProvider::class
     )
 ```
 
@@ -33,9 +33,11 @@ Find the `aliases` key in `app/config/app.php`.
 ```php
     'aliases' => array(
         // ...
-        'Thumb' => 'Mews\Thumb\Facades\Thumb',
+        'Thumb' => Mews\Thumb\Facades\Thumb::class
     )
 ```
+
+**Since Laravel 5.5** this should be done automatically by installing the package through Composer.
 
 ## Example
 
@@ -47,16 +49,16 @@ Find the `aliases` key in `app/config/app.php`.
         $file = base_path() . '/' . $image;
         // for remote file
         //$file = 'http://i.imgur.com/1YAaAVq.jpg';
-        Thumb::create($file)->make('resize', array($width, $height))->show()->save(base_path() . '/', 'aaa.jpg');
+        \Thumb::create($file)->make('resize', array($width, $height))->show()->save(base_path() . '/', 'aaa.jpg');
         /*
-            Thumb::create($file)->make('resize', array($width, $height))->make('crop', array('center', $width, $height))->show();
-            Thumb::create($file)->make('resize', array($width, $height))->make('crop', array('basic', 100, 100, 300, 200))->show();
-            Thumb::create($file)->make('resize', array($width, $height))->make('resize', array($width, $height))->show();
-            Thumb::create($file)->make('resize', array($width, $height))->make('resize', array($width, $height, 'adaptive'))->save(base_path() . '/', 'aaa.jpg')->show();
-            Thumb::create($file)->make('resize', array($width, $height))->rotate(array('degree', 180))->show();
-            Thumb::create($file)->make('resize', array($width, $height))->reflection(array(40, 40, 80, true, '#a4a4a4'))->show();
-            Thumb::create($file)->make('resize', array($width, $height))->save(base_path() . '/', 'aaa.jpg');
-            Thumb::create($file)->make('resize', array($width, $height))->show();
+            \Thumb::create($file)->make('resize', array($width, $height))->make('crop', array('center', $width, $height))->show();
+            \Thumb::create($file)->make('resize', array($width, $height))->make('crop', array('basic', 100, 100, 300, 200))->show();
+            \Thumb::create($file)->make('resize', array($width, $height))->make('resize', array($width, $height))->show();
+            \Thumb::create($file)->make('resize', array($width, $height))->make('resize', array($width, $height, 'adaptive'))->save(base_path() . '/', 'aaa.jpg')->show();
+            \Thumb::create($file)->make('resize', array($width, $height))->rotate(array('degree', 180))->show();
+            \Thumb::create($file)->make('resize', array($width, $height))->reflection(array(40, 40, 80, true, '#a4a4a4'))->show();
+            \Thumb::create($file)->make('resize', array($width, $height))->save(base_path() . '/', 'aaa.jpg');
+            \Thumb::create($file)->make('resize', array($width, $height))->show();
         */
 
     });
