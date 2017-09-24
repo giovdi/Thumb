@@ -16,12 +16,11 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "5.x"
+        "illuminate/support": "5.*"
     },
     "autoload": {
         "psr-0": {
             "Mews\\Thumb": "src/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
