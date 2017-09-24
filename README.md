@@ -16,7 +16,7 @@ Update your packages with ```composer update``` or install with ```composer inst
 
 ## Usage
 
-**Up to Laravel 5.5**, to use the PHPThumb Service Provider, you must register the provider when bootstrapping your Laravel application. There are
+**Up to Laravel 5.4**, to use the PHPThumb Service Provider, you must register the provider when bootstrapping your Laravel application. There are
 essentially two ways to do this.
 
 Find the `providers` key in `app/config/app.php` and register the PHPThumb Service Provider.
