@@ -1,21 +1,15 @@
-# PHPThumb for Laravel 4 (Personal version)
+# PHPThumb for Laravel 5 (Personal version)
 
-A simple [Laravel 4](http://four.laravel.com/) service provider for including the [PHPThumb for Laravel 4](https://github.com/mewebstudio/Thumb).
+A simple Laravel 5 service provider for including the [PHPThumb for Laravel 4](https://github.com/mewebstudio/Thumb).
 
 ## Installation
 
-The PHPThumb Service Provider can be installed via [Composer](http://getcomposer.org) by requiring the
-`mews/phpthumb` package and setting the `minimum-stability` to `dev` (required for Laravel 4) in your
-project's `composer.json`.
+The PHPThumb Service Provider can be installed via [Composer](http://getcomposer.org) by adding the repository and requiring the
+`giovdi/laravel-thumb5` package in your project's `composer.json`. This can be done by cli with the following commands:
 
-```json
-{
-    "require": {
-        "laravel/framework": "4.0.*",
-        "mews/thumb": "dev-master"
-    },
-    "minimum-stability": "dev"
-}
+```
+composer config repositories.thumb5 vcs https://github.com/giovdi/laravel5-thumb
+composer require giovdi/laravel-thumb5
 ```
 
 Update your packages with ```composer update``` or install with ```composer install```.
@@ -67,9 +61,6 @@ Find the `aliases` key in `app/config/app.php`.
 
     });
 ```
-
-^_^                         
-
 
 ## Links
 
