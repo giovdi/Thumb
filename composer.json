@@ -23,5 +23,15 @@
         "psr-0": {
             "Mews\\Thumb": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mews\\Thumb\\ThumbServiceProvider"
+            ],
+            "aliases": {
+                "Thumb": "Mews\\Thumb\\Facades\\Thumb"
+            }
+        }
     }
 }
